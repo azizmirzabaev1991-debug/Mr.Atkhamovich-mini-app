@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini App Test</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #1c1c1e; color: #fff; padding: 20px; margin: 0; }
+    .card { background: #2c2c2e; padding: 15px; border-radius: 12px; margin-bottom: 20px; }
+    .btn { background: #3a3a3c; color: #fff; padding: 12px; border-radius: 10px; width: 100%; border: none; margin-bottom: 10px; font-size: 15px; text-align: left; }
+    .btn:active { background: #007aff; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <small>VAZIYAT 1/1</small>
+    <h3>Эртага муҳим топшириқ бор. Бугун нима қиласиз?</h3>
+  </div>
+  <button class="btn" onclick="selectOpt('A')">A) Барча ишни эртага қолдираман</button>
+  <button class="btn" onclick="selectOpt('B')">B) Режа тузиб, тайёргарликни бошлайман</button>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+
+    function selectOpt(option) {
+      alert("Сиз " + option + " вариантни танладингиз!");
+      tg.close();
+    }
+  </script>
+</body>
+</html>
